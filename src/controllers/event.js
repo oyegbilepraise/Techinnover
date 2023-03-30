@@ -28,7 +28,7 @@ const analytics = async (req, res) => {
 
 const get_analytics = async (req, res) => {
     try {
-        res.status(200).json({ status: true, error: false, message: 'Success' });
+        res.status(200).json({ status: true, error: false, message: 'Success', data: allEvents });
     } catch (error) {
         console.log({ error });
         res.status(500).json({ error: error, status: false });
