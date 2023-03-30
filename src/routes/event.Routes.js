@@ -10,6 +10,6 @@ router.post('/analytics', [
     eventController.analytics
 ]);
 
-router.get('/get_analytics', eventController.get_analytics);
+router.get('/analytics', eventController.get_analytics);
 
 export default router;
