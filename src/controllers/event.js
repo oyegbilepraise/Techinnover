@@ -17,7 +17,6 @@ const analytics = async (req, res) => {
             if (event.type === 'pageView' && hasPageViewWithin5Secs) return acc;
             return [...acc, { ...event, timestamp: now, id: acc.length + 1 }];
         }, []);
-        console.log({ hasClickWithin3Secs, hasPageViewWithin5Secs });
         allEvents.push(...eventsToSave);
         res.status(201).json({ ingested: eventsToSave.length });
     } catch (error) {
