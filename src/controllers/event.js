@@ -26,7 +26,7 @@ const analytics = async (req, res) => {
     }
 };
 
-const get_analytics = async (req, res) => {
+const getAnalytics = async (req, res) => {
     try {
         res.status(200).json({ status: true, error: false, message: 'Success', data: allEvents });
     } catch (error) {
@@ -35,4 +35,4 @@ const get_analytics = async (req, res) => {
     }
 };
 
-module.exports = { analytics, get_analytics };
+module.exports = { analytics, getAnalytics };
